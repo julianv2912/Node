@@ -27,9 +27,7 @@ document.getElementById('ir-login').addEventListener('click', () => {
 mostrarLogin();
 });
 
-document.getElementById('registro-form').addEventListener('submit', async
-(e) => {
-e.preventDefault();
+document.getElementById('registro-form').addEventListener('submit', async(e) => {e.preventDefault();
 const form = e.target;
 const nombre = form.nombre.value.trim();
 const correo = form.correo.value.trim();
@@ -69,10 +67,7 @@ roll: 'usuario',
 ]);
 
 if (errorInsert) {
-errorElement.textContent = 'Usuario creado pero error en base de datos:
-' + errorInsert.message;
-} else {
-mostrarLogin(); // Redirige al login después del registro exitoso
+errorElement.textContent = 'Usuario creado pero error en base de datos:' + errorInsert.message;} else {mostrarLogin(); // Redirige al login después del registro exitoso'
 }
 });
 

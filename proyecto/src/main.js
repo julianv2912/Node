@@ -1,6 +1,6 @@
 import { supabase } from "./supabase.js";
 import { mostrarLogin } from "./login.js";
-import { mostrarRegistro } from "./registro.js";
+import { mostrarDatos } from "./usuario.js";
 
 document.addEventListener('DOMContentLoaded', async () => {
 const user = await validarSesion();
@@ -302,3 +302,4 @@ window.actualizarIconoFavorito = actualizarIconoFavorito;
 window.mostrarFavoritos = mostrarFavoritos;
 window.mostrarAleatorio = mostrarAleatorio;
 window.mostrarAlbum = mostrarAlbum;
+window.mostrarDatos = mostrarDatos

@@ -1,4 +1,5 @@
 import { supabase } from './supabase.js';
+import { mostrarAdministrador } from './administrador.js';
 
 export async function mostrarDatos() {
 const app = document.getElementById('app');
@@ -51,6 +52,8 @@ value="${usuario.fecha_nacimiento}" /></label><br/>
 <hr/>
 <h2>Quiero cerrar sesión</h2>
 <button id="btn-cerrar-sesion">Cerrar sesión</button>
+${usuario.roll === "admin" ? `<button class="c-nav-item"id="btn-administrador">Administrador</button>` : ""}
+
 <br/><br/><br/><br/><br/>
 </div>
 `;
@@ -123,6 +126,11 @@ cargarImagenes();
 document.getElementById('btn-cerrar-sesion').addEventListener('click', async() => {
 await supabase.auth.signOut();
 location.reload(); // recarga la app
+});
+
+//administrador 
+document.getElementById('btn-administrador').addEventListener('click',async ()=>{
+mostrarAdministrador()
 });
 
 }

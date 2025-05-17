@@ -23,8 +23,7 @@ document.querySelector("#btn-registro").addEventListener("click",
 mostrarRegistro);
 
 // ir a registro
-document.getElementById('btn-registro').addEventListener('click', ()
-=> {
+document.getElementById('btn-registro').addEventListener('click', () => {
 mostrarRegistro();
 });
 }
